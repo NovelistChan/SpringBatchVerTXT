@@ -57,6 +57,7 @@
     </bean>
 
     <bean id="myWriter" class="cn.edu.nju.sa2017.pipefilter.MyWriter">
+        <property name="resource" value="txt/outputs/report.txt"></property>
     </bean>
 
     <bean id="reportMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">

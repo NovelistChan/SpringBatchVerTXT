@@ -7,9 +7,15 @@ import java.util.Iterator;
 import java.util.List;
 
 public class MyWriter implements ItemWriter<Report> {
+    private String resource;
+
+    public void setResource(String resource) {
+        this.resource = resource;
+    }
     @Override
     public void write(List<? extends Report> list) {
-        File file = new File("txt/outputs/report.txt");
+
+        File file = new File(resource);
         FileWriter fileWriter = null;
         try{
             fileWriter = new FileWriter(file);
